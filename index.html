@@ -3,34 +3,35 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Product System Managment - jones</title>
     <link rel="stylesheet" href="style.css" />
+    <title>Product Sysyem Managment</title>
   </head>
   <body>
     <div class="crud">
       <div class="header">
-        <h2>crud</h2>
-        <p>Product system managment</p>
+        <h3>crud</h3>
+        <p>product system managment</p>
       </div>
-      <input type="text" name="title" id="title" placeholder="title" />
-      <div class="prices">
-        <input type="number" id="price" placeholder="price" />
-        <input type="number" id="taxes" placeholder="taxes" />
-        <input type="number" id="ads" placeholder="ads" />
-        <input type="number" id="discount" placeholder="discount" />
-        <small id="total">123</small>
+      <div class="inputs">
+        <input type="text" name="title" id="title" placeholder="title" />
+        <div class="prices">
+          <input onkeyup="getTotal()" type="number" id="price" placeholder="price" />
+          <input onkeyup="getTotal()" type="number" id="taxes" placeholder="taxes" />
+          <input onkeyup="getTotal()" type="number" id="ads" placeholder="ads" />
+          <input onkeyup="getTotal()" type="number" id="discount" placeholder="discount" />
+          <small id="total"></small>
+        </div>
+        <input type="text" name="count" id="count" placeholder="count" />
+        <input type="text" id="category" placeholder="category" />
+        <button type="submit" id="submit">Create</button>
       </div>
-      <input type="number" name="" id="" placeholder="count" />
-      <input type="text" name="" id="" placeholder="category" />
-      <button>Create</button>
-
-      <input type="text" name="" id="search" placeholder="search" />
-      <div class="buttons">
-        <button>Search by title</button>
-        <button>Search by category</button>
+      <div class="outputs">
+        <input type="text" name="search" id="search" placeholder="search" />
+        <div class="btn">
+          <button>Search by title</button>
+          <button>Search by category</button>
+        </div>
       </div>
-
-
       <table>
         <tr>
           <th>id</th>
@@ -44,21 +45,15 @@
           <th>update</th>
           <th>delete</th>
         </tr>
-        <tbody>
-          <tr>
-            <td>1</td>
-            <td>iphone</td>
-            <td>100</td>
-            <td>200</td>
-            <td>150</td>
-            <td>1400</td>
-            <td>2500</td>
-            <td>phone</td>
-            <td><button>update</button></td>
-            <td><button>delete</button></td>
-          </tr>
+        <tbody id="tbody">
+       
         </tbody>
       </table>
     </div>
+
+
+
+
+    <script src="app.js"></script>
   </body>
 </html>
